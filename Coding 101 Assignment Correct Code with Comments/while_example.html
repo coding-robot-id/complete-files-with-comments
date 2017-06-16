@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+
+    <script>
+
+      // program takes in input from user and lets the user enter the site if the password
+      // matches the input
+
+      // set initial input variable to empty
+      var input = "";
+      // set password variable to the correct password
+      var password = "id tech";
+      // set the variable that determines if the loop keeps running to the value that will make the loop
+      // start running
+      var isCorrect = false;
+
+      // while loop checks if the input is correct or not
+      while(isCorrect == false){
+        // sets input variable to take user input
+        input = prompt("Please enter password");
+        // alerts incorrect and restarts loop if entered password is incorrect
+        if (input != password){
+          alert("Incorrect!");
+        }
+        // if password is correct, then set isCorrect to true and stop the loop
+        else {
+          isCorrect = true;
+        }
+
+      }
+
+    </script>
+
+
+
+  </head>
+  <body>
+
+
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+
+    <style>
+      #change {
+        margin: 100px 0px 0 100px;
+        font-size: 60px;
+      }
+      input {
+        margin-left: 100px;
+      }
+    </style>
+
+    <script>
+      // This function takes in a string variable and sets the text inside of
+      // the tag with the id of 'change' to the new text that was passed into
+      // the function
+      function changeText(new_text) {
+        // gets the element from the document with the id 'change' and sets it
+        // equal to the variable 'tag'
+        var tag = document.getElementById('change');
+        // uses the innerHTML attribute to change the text to the new text that
+        // was passed into the function
+        tag.innerHTML = new_text;
+      }
+
+
+    </script>
+
+  </head>
+  <body>
+
+    <h1 id="change">Change me!</h1>
+    <input type="button" value="CLICK ME" onclick="changeText('I have been changed!')">
+
+  </body>
+</html>

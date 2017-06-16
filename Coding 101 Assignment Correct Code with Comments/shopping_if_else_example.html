@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+
+    <script>
+
+      alert("This shirt costs $10.00");
+      // make a variable and ask what the user would be willing to pay for the
+      // shirt
+      var money = prompt("What will you pay for the shirt?");
+      // make a variable for how much change the user would get back if they
+      // decided to buy the shirt with the money they have
+      var change = shirt - 10;
+
+      // if the change they get back less than 0, that means they don't have
+      // enough money to buy the shirt
+      if (change < 0) {
+        alert("You can't buy that. You only have $" + (change + 10) + " to spend.");
+      }
+
+      // if the change is 0 or greater, then they can buy they shirt, and are
+      // notified how much change they get back
+      else if (change >= 0){
+        alert("You bought the shirt! You have $" + change + " left.");
+      }
+
+    </script>
+
+
+
+  </head>
+  <body>
+
+
+  </body>
+</html>

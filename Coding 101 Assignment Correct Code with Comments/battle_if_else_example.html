@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Battle</title>
+
+    <script>
+
+      // make variables for all attributes of character
+      // variable for character name
+      var character = prompt("What is the name of your character?");
+      // variable for character health value
+      var character_health = prompt("How much health will " + character + " have?");
+      // variable used to check if the character died to control the while loop
+      var characterDied = false;
+
+      // make variables for all attributes of monster
+      // variable for monster name
+      var monster = prompt("What monster will " + character + " fight?");
+      // variable for monster health value
+      var monster_health = prompt("How much health will " + monster + " have?");
+      // variable used to check if the monster died to control the while loop
+      var monsterDied = false;
+
+      // while loop to go through the whole battle
+      // while loop checks if the character and the monster are still alive.
+      // if they are, then all the code inside of it runs
+      while (characterDied == false && monsterDied == false) {
+        // checks if the monster's health is less than or equal to zero
+        if (monster_health <= 0){
+          // declares winner
+          alert("The monster has died! " + character + " has won!");
+          // tells the while loop to stop
+          monsterDied = true;
+        }
+        // checks if the character's health is less than or equal to zero
+        else if (character_health <= 0) {
+          // declares winner
+          alert(character + " has died! The monster has won!");
+          // tells the while loop to stop
+          characterDied = true;
+        }
+        else {
+          // variables to set how much the character and the monster hit each
+          // other for
+          // each variable is set to a random number between 1 and 10
+          var character_attack = Math.floor((Math.random() * 10) + 1);
+          var monster_attack = Math.floor((Math.random() * 10) + 1);
+
+          // subtracts damage points from the random numbers from the
+          // health of the monster and the character
+          character_health = character_health - monster_attack;
+          monster_health = monster_health - character_attack;
+
+          // lets user know that the monster and the character have attacked each
+          // other, and declares new health values for both
+          alert(character + " attacks " + monster + "! " + monster + " has " + monster_health + " health left!");
+          alert(monster + " attacks " + character + "! " + character + " has " + character_health + " health left!");
+
+        }
+
+      }
+
+    </script>
+
+
+
+  </head>
+  <body>
+
+
+  </body>
+</html>

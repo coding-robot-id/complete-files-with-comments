@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body>
+
+
+    <!-- This is an image tag that shows an image on the web page -->
+    <img src="https://images.pexels.com/photos/198534/pexels-photo-198534.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" id="adventure_image">
+
+    <!-- This is a button that will call a javascript function that
+         will change the image above when it is clicked -->
+    <input type="button" value="CHANGE IMAGE" onclick="changeImage('https://images.pexels.com/photos/284849/pexels-photo-284849.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb')">
+
+    <script>
+      // The changeImage function takes in a url or an image and makes it
+      // the image of the tag wil the id 'adventure_image'
+      function changeImage(url) {
+        // sets a new variable equal to the tag in the page with the id
+        // 'adventure_image'
+        var image = document.getElementById('adventure_image');
+        // changes the images' source to the url of the new image that
+        // is passed into the function
+        image.src=url;
+      }
+
+    </script>
+  </body>
+</html>
