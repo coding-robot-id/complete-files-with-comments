@@ -5,18 +5,13 @@
     <title>Battle</title>
 
     <script>
-
       var character = prompt("What is the name of your character?");
       var character_health = prompt("How much health will " + character + " have?");
       var characterDied = false;
-
       var monster = prompt("What monster will " + character + " fight?");
       var monster_health = prompt("How much health will " + monster + " have?");
       var monsterDied = false;
-
-
       while (characterDied == false && monsterDied == false) {
-
         if (monster_health <= 0){
           alert("The monster has died! " + character + " has won!");
           monsterDied = true;
@@ -32,17 +27,12 @@
           // sets monster health variable to the new value that the
           // attack function returns
           monster_health = characterAttacksMonster(monster_health);
-
           alert(character + " attacks " + monster + "! " + monster + " has " + monster_health + " health left!");
           alert(monster + " attacks " + character + "! " + character + " has " + character_health + " health left!");
-
         }
-
       }
-
       // function that makes the character attack the monster and
       // subtracts points from the monster's health
-
       // function takes in the current health points and makes it a variable
       // that can be used inside of the function
       function characterAttacksMonster(health) {
@@ -50,15 +40,14 @@
         var character_attack = Math.floor((Math.random() * 10) + 1);
         // health variable that was passed into the function is decreased by
         // the random attack variable
-        health = health - monster_attack;
+        health = health - character_attack;
         // function sends the now changed health variable that it took in back
         // to wherever the function it was called from
         return health;
       }
-
       function monsterAttacksCharacter(health) {
         var monster_attack = Math.floor((Math.random() * 10) + 1);
-        health = health - character_attack;
+        health = health - monster_attack;
         return health;
       }
     </script>
